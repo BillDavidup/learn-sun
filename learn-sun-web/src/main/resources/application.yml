@@ -1,0 +1,12 @@
+# 端口号
+server:
+  port: 9091
+  servlet:
+    context-path: /
+  tomcat:
+    threads:
+      max: 3000
+# 选择哪个的激活环境配置文件
+spring:
+  profiles:
+    active: dev
