@@ -63,7 +63,7 @@
             <dependency>
                 <groupId>com.david.learn</groupId>
                 <artifactId>first-demo-spring-boot-starter</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.2-SNAPSHOT</version>
             </dependency>
 
         </dependencies>
