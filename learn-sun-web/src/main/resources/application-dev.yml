@@ -1,0 +1,4 @@
+demo:
+  json:
+    prefix-name: "%"
+    suffix-name: "%"
