@@ -47,6 +47,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!-- 引入的自定义starter -->
+        <dependency>
+            <groupId>com.david.learn</groupId>
+            <artifactId>first-demo-spring-boot-starter</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

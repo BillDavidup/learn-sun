@@ -1,6 +1,9 @@
 package com.dening.learn.sun.web.controller;
 
+import com.david.learn.first.service.JsonConvertService;
+import com.dening.learn.sun.common.pojo.Person;
 import com.dening.learn.sun.web.param.DemoObjParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,8 +25,12 @@ import java.util.Objects;
 @RequestMapping("/api/demo")
 public class DemoController {
 
+    @Autowired
+    JsonConvertService jsonConvertService;
+
     /**
      * mvc:get方法
+     *
      * @param name
      * @return
      */
@@ -34,6 +41,7 @@ public class DemoController {
 
     /**
      * mvc:post方法
+     *
      * @param userId
      * @param userName
      * @return
@@ -51,6 +59,7 @@ public class DemoController {
 
     /**
      * post:参数用对象来接收
+     *
      * @param demoObjParam
      * @return
      */
@@ -62,6 +71,7 @@ public class DemoController {
 
     /**
      * post:参数用List列表对象来接收
+     *
      * @param objList
      * @return
      */
@@ -79,6 +89,7 @@ public class DemoController {
 
     /**
      * post:参数用Map来接收
+     *
      * @param map
      * @return
      */
@@ -102,6 +113,7 @@ public class DemoController {
 
     /**
      * post:参数从header请求头中获取
+     *
      * @param request
      * @param name
      * @return
@@ -112,6 +124,22 @@ public class DemoController {
         String s = "(" + name + " " + uid + ")" + ",Welcome to HttpServletRequest demo";
         System.out.println(request.toString());
         return s;
+    }
+
+    /**
+     * 自定义starter测试方法
+     *
+     * @param request
+     * @return
+     */
+    @PostMapping("/post/example/json/convert")
+    public String postExampleJsonConvert(HttpServletRequest request) {
+        String name = request.getParameter("name");
+        Integer age = Integer.valueOf(request.getParameter("age"));
+        Person p = new Person();
+        p.setName(name);
+        p.setAge(age);
+        return jsonConvertService.objectToJson(p);
     }
 
 }

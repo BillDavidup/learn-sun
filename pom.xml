@@ -59,6 +59,13 @@
                 <scope>provided</scope>
             </dependency>
 
+            <!-- 声明引入的自定义starter -->
+            <dependency>
+                <groupId>com.david.learn</groupId>
+                <artifactId>first-demo-spring-boot-starter</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
