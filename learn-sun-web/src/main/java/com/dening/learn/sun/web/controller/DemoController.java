@@ -1,7 +1,7 @@
 package com.dening.learn.sun.web.controller;
 
 import com.david.learn.first.service.JsonConvertService;
-import com.dening.learn.sun.common.pojo.Person;
+import com.dening.learn.sun.web.controller.pojo.Person;
 import com.dening.learn.sun.web.param.DemoObjParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

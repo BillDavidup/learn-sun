@@ -1,4 +1,4 @@
-package com.dening.learn.sun.common.pojo;
+package com.dening.learn.sun.web.controller.pojo;
 
 public class Person {
     public Person() {
