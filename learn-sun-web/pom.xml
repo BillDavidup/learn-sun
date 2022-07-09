@@ -39,6 +39,10 @@
             <groupId>com.dening.learn.sun</groupId>
             <artifactId>learn-sun-service</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.dening.learn.sun</groupId>
+            <artifactId>learn-sun-common</artifactId>
+        </dependency>
 
         <!-- 第三方依赖 -->
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
